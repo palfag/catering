@@ -1,0 +1,7 @@
+1. Run edit Configuation -> settare VM options
+2. aggiungere librerie javaFx e jdbc connector
+3. persistence/PersistenceManager.java
+	-
+	 private static String url = "jdbc:mysql://localhost:8889/catering?serverTimezone=UTC";
+   	 private static String username = "root";
+   	 private static String password = "root";
