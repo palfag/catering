@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="506.0" prefWidth="685.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.kitchenTask.ModifyTask">
+   <children>
+      <GridPane layoutX="137.0" layoutY="129.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="163.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="522.0" minWidth="10.0" prefWidth="522.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="310.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="310.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="310.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="215.0" minHeight="0.0" prefHeight="51.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="154.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+           <RowConstraints maxHeight="136.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+           <RowConstraints maxHeight="125.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <center>
+                  <Label text="Tempo stimato" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <center>
+                  <Label text="Quantità" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5" />
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <center>
+                  <TextField fx:id="estimateTimeTextField" prefHeight="25.0" prefWidth="261.0" promptText="minuti" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="19.0" right="150.0" />
+                     </BorderPane.margin></TextField>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <center>
+                  <TextField fx:id="quantityTextField" promptText="grammi o porzioni" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="19.0" right="150.0" />
+                     </BorderPane.margin></TextField>
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="91.0" prefWidth="461.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <left>
+                  <CheckBox fx:id="checkCompleted" mnemonicParsing="false" onAction="#completedCheck" text="compito già svolto" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets left="19.0" />
+                     </BorderPane.margin></CheckBox>
+               </left></BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <center>
+                  <Label text="Assegnamento" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="6" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="34.0" layoutY="39.0" text="Stato del compito" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="127.0" prefWidth="523.0" GridPane.columnIndex="1">
+               <children>
+                  <VBox layoutY="22.0" prefHeight="102.0" prefWidth="336.0" AnchorPane.topAnchor="22.0">
+                     <children>
+                        <Label fx:id="procedureLabel" prefHeight="17.0" prefWidth="303.0" text="Procedura">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="19.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="shiftLabel" prefHeight="17.0" prefWidth="300.0" text="Turno">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="19.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="quantityLabel" prefHeight="17.0" prefWidth="300.0" text="Quantità">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="19.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="285.0" layoutY="22.0" prefHeight="102.0" prefWidth="197.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="22.0">
+                     <children>
+                        <Label fx:id="cookLabel" prefHeight="17.0" prefWidth="176.0" text="Cuoco">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="19.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="timeLabel" prefHeight="17.0" prefWidth="177.0" text="Tempo stimato">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="19.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="461.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Button layoutX="55.0" layoutY="7.0" mnemonicParsing="false" onAction="#saveButtonPressed" text="Salva" />
+                  <Button layoutX="297.0" layoutY="7.0" mnemonicParsing="false" onAction="#exitButtonPressed" text="Annulla" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <DatePicker fx:id="datePicker" layoutX="20.0" layoutY="22.0" onAction="#dateChose" prefHeight="26.0" prefWidth="154.0" promptText="Giorno">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></DatePicker>
+                  <ComboBox fx:id="hoursCombo" disable="true" layoutX="191.0" layoutY="22.0" onAction="#hoursChose" prefHeight="26.0" prefWidth="275.0" promptText="Orario" />
+                  <ComboBox fx:id="cooksListCombo" disable="true" layoutX="20.0" layoutY="71.0" prefHeight="26.0" prefWidth="275.0" promptText="Cuochi" />
+                  <Button fx:id="btnNullifyAssignment" disable="true" layoutX="20.0" layoutY="116.0" mnemonicParsing="false" onAction="#nullifyAssignment" prefHeight="26.0" prefWidth="154.0" text="Rimuovi l'assegnamento" textAlignment="CENTER" textFill="#970000" wrapText="true" />
+               </children>
+            </AnchorPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <center>
+                  <Label text="Procedura" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ComboBox fx:id="procedureCombo" layoutX="20.0" layoutY="25.0" prefHeight="25.0" prefWidth="446.0" promptText="Cambia procedura" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

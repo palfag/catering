@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.kitchenTask.Calendar">
+   <children>
+      <HBox fx:id="hBox" layoutX="178.0" layoutY="141.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="397.0" prefWidth="246.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="250.0" text="Turni" />
+                  <ListView fx:id="shiftListView" prefHeight="358.0" prefWidth="212.0" />
+                  <CheckBox fx:id="checkComplete" mnemonicParsing="false" onAction="#completeCheckPressed" prefHeight="25.0" prefWidth="195.0" text="Turno al completo">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </CheckBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="404.0" prefWidth="387.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="421.0" text="Assegnamenti" />
+                  <ListView fx:id="assignmentListView" prefHeight="358.0" prefWidth="201.0" />
+               </children>
+            </VBox>
+            <VBox prefHeight="401.0" prefWidth="169.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="17.0" prefWidth="218.0" text="Disponibilità" />
+                  <ListView fx:id="availabilityListView" prefHeight="358.0" prefWidth="159.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
